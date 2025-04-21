@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Starting installation..."
+      - npm install
+  build:
+    commands:
+      - echo "Starting build..."
+      - npm run build
+  post_build:
+    commands:
+      - echo "Build completed. Artifacts will be created."
+artifacts:
+  base-directory: build
+  files:
+    - '**/*'
